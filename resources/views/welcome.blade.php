@@ -30,8 +30,28 @@
                 <li href="">About</li>
             </div>
             <div class="onboard">
-                <button class="secondary">Log In</button>
-                <button class="primary">Register</button>
+                @guest
+                @if (Route::has('login'))
+                <a style="text-decoration:none;" href="{{ route('login') }}"><button class="secondary" href="">Log
+                        In</button></a>
+                @endif
+
+                @if (Route::has('register'))
+                <a style="text-decoration:none;" href="{{ route('register') }}"><button class="primary"
+                        href="">Register</button></a>
+                @endif
+
+                @else
+                <a style="text-decoration:none;" href="/home"><button class="primary" href="">Dashboard</button></a>
+
+                <a style="text-decoration:none;" href="{{ route('logout') }}"" onclick=" event.preventDefault();
+                    document.getElementById('logout-form').submit();"><button class="secondary" href="">Log
+                        Out</button></a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+                @endguest
+
             </div>
         </div>
     </section>
@@ -252,8 +272,8 @@
             <p class="mail-head">Subscribe to our daily <br> <span>newsletter</span>
             </p>
             <div class="mailbox">
-                <form action="">
-                    <input class="mailinput" type="text" id="" name="" placeholder="Email">
+                <form action="send-mail">
+                    <input name="email" class="mailinput" type="text" id="" name="" placeholder="Email">
                     <button class="primary">
                         <span>Subscribe <img style="margin-left:8px;min-width:13px;"
                                 src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
@@ -401,6 +421,11 @@
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <section>
+
     </section>
 </body>
 

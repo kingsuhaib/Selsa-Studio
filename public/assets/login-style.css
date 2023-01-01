@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("fonts/Raleway-Bold.ttf");
+}
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url("fonts/Raleway-Medium.ttf");
+}
+@font-face {
+    font-family: "Raleway-SemiBold";
+    src: url("fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("fonts/Poppins-Medium.ttf");
+}
+
+body {
+    height: 100vh !important;
+    overflow-y: hidden;
+    background-image: url("mainbg.png");
+}
+p {
+    margin: 0px;
+}
+button {
+    cursor: pointer;
+}
+.hl,
+.hl2,
+.hl3,
+.hl4,
+.hl5,
+.hl6,
+.hl7,
+.hl-p {
+    cursor: default;
+}
+.navbar,
+.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.right {
+    gap: 126px;
+}
+
+section {
+    padding-right: 120px !important;
+    padding-left: 120px !important;
+}
+li {
+    overflow: visible;
+    max-width: 25px;
+    list-style-type: none;
+    padding-bottom: 1px;
+
+    transition: all 0.2s;
+}
+
+li:hover {
+    color: #1a1a1a;
+    margin-bottom: -3px;
+    cursor: pointer;
+    border-bottom: 3px solid #4325f9;
+}
+.menu {
+    color: #849fa8;
+    font-family: "Poppins-SemiBold";
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 120px;
+}
+.onboard {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+.primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 30px;
+    background-image: url("sec-long.png");
+    border-radius: 60px;
+    border-style: none;
+    color: #fff;
+    font-family: "Poppins-Medium";
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 30px;
+    background-image: url("pri-long.png");
+    border-radius: 60px;
+    border-style: none;
+    color: #1e1e1e;
+    font-family: "Poppins-Medium";
+    font-size: 18px;
+
+    transition: all 0.5s;
+}
+.primary:hover,
+.secondary:hover {
+    transition: all 0.5s;
+    color: #fff;
+    background-image: url("hov-long.png");
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.21);
+}
+
+/* ==================================== */
+.hero {
+    align-items: center;
+    height: calc(100vh - 103px);
+    display: flex;
+    justify-content: space-between;
+}
+.btnpair {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+.left1 {
+    width: 50%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+.right1 {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hl {
+    transition: all 0.7s;
+    font-family: "Poppins-SemiBold";
+    font-size: 14px;
+    line-height: 21px;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 4px 20px;
+    border-radius: 40px;
+    width: fit-content;
+}
+.hl:hover {
+    transition: all 0.7s;
+    background-color: rgb(67, 37, 249);
+    color: #fff !important;
+}
+.home-head {
+    font-family: "Raleway-Bold";
+    font-size: 72px;
+    line-height: 85px;
+
+    /* #1E1E1E */
+
+    color: #1e1e1e;
+}
+.home-head span {
+    background: linear-gradient(143.82deg, #39d0ff 0%, #4325f9 88.66%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.home-text {
+    font-family: "raleway-semibold";
+    font-size: 22px;
+    line-height: 125.4%;
+    /* or 28px */
+
+    /* #1E1E1E */
+
+    color: #1e1e1e;
+}
+
+.ccwrap {
+    /* background: linear-gradient(
+        91.01deg,
+        rgba(255, 255, 255, 0.6) 0.98%,
+        rgba(255, 255, 255, 0.26) 21.04%
+    ); */
+    background-color: rgba(255, 255, 255, 0.36);
+    box-shadow: 0px 142px 65px -89px rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 20px;
+    padding: 96px 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    transition: all 0.3s ease-in-out;
+}
+.ccwrap:hover {
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.56);
+    box-shadow: 0px 170px 65px -89px rgba(34, 54, 124, 0.2);
+}
+.cc-head {
+    font-family: "Raleway-Bold";
+    font-size: 32px;
+    color: #1e1e1e;
+}
+.logosimgs {
+    filter: grayscale(50%);
+    width: 230px;
+    transition: all 0.4s ease-in-out;
+}
+.logosimgs:hover {
+    filter: grayscale(0%);
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.2, 1.2);
+}
+/* -------------------------- */
+input {
+    width: 300px;
+    padding: 16px 24px;
+    font-family: "raleway-semibold";
+    font-size: 16px;
+    color: #1e1e1e;
+    background-color: transparent;
+    border: 3px solid #6753e1;
+    border-radius: 10px;
+}
+
+label {
+    font-family: "raleway-semibold";
+    font-size: 16px;
+    color: #6753e1;
+}
+.ddiv {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
