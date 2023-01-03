@@ -39,6 +39,16 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+public function dbroute(){
+    if (auth()->user()->type == 'super-admin') {
+        return redirect()->route('super.admin.home');
+    }else if (auth()->user()->type == 'manager') {
+        return redirect()->route('manager.home');
+    }else{
+        return redirect()->route('home');
+    }
+}
+
     public function login(Request $request)
     {   
         $input = $request->all();

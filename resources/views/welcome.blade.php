@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - Selsa Studio</title>
     <link rel="stylesheet" href="{{ URL::asset('assets/home-style.css'); }}">
 
 
@@ -18,16 +18,27 @@
     <section class="navbar">
         <!-- LOGO DIV -->
         <div class="left">
-            <img src="{{ URL::asset('assets/navlogo.png'); }}" alt="">
+            <a href="/" style="text-decoration: none;"><img src="{{ URL::asset('assets/navlogo.png'); }}" alt=""></a>
         </div>
         <!-- MENU+BUTTONS DIV -->
         <div class="right">
             <div class="menu">
-                <li href="" style="margin-right:-35px;">Home</li>
-                <li href="" style="margin-right:-14px;">Services</li>
-                <li href="">Packages</li>
-                <li href="" style="margin-right:-15px;">Portfolio</li>
-                <li href="">About</li>
+                <a href="/" style="text-decoration: none; color:#1e1e1e;">
+                    <li href="" style="margin-right:-35px;">Home</li>
+                </a>
+                <a href="/#services" style="text-decoration: none; color:#849fa8;">
+                    <li href="" style="margin-right:-14px;">Services</li>
+                </a>
+                <a href="#packages" style="text-decoration: none; color:#849fa8;">
+                    <li href="">Packages</li>
+                </a>
+                <a href="/portfolio" style="text-decoration: none; color:#849fa8;">
+                    <li href="" style="margin-right:-15px;">Portfolio</li>
+                </a>
+                <a href="#about" style="text-decoration: none; color:#849fa8;">
+                    <li href="">About</li>
+                </a>
+
             </div>
             <div class="onboard">
                 @guest
@@ -77,11 +88,13 @@
                     the startups and
                     long running valuable businesses.</p>
                 <div class="btnpair">
-                    <button class="primary">
-                        <span>Make an Order <img style="margin-left:8px;min-width:13px;"
-                                src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
-                        </span>
-                    </button>
+                    <a href="/login" style="text-decoration: none;"><button class="primary">
+                            <span>Make an Order <img style="margin-left:8px;min-width:13px;"
+                                    src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
+                            </span></button>
+                    </a>
+
+
                     <button class="secondary">Explore</button>
 
                 </div>
@@ -128,7 +141,7 @@
 
     <!-- Services -->
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="left2">
             <p class="hl2" style="color: #FC3B3B;">services</p>
             <p class="service-head">The <span>astonishing</span>
@@ -159,7 +172,7 @@
 
     <!-- PACKAGES/PRICING -->
 
-    <section class="services">
+    <section class="services" id="packages">
         <div class="left3">
             <div class="p1">
                 <p class="hl-p" style="color: #1e1e1e; margin-bottom:12px; margin-top:20px;">basic</p>
@@ -168,11 +181,15 @@
                     Unlimited Revisions<br>
                     5 different Mockups</p>
                 <p class="pack-text" style="font-size: 52px; color:#1e1e1e; margin-bottom:32px;">$299</p>
-                <button class="primary">
-                    <span>Make an Order <img style="margin-left:8px;min-width:13px;"
-                            src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
-                    </span>
-                </button>
+                <a href="/login" style="text-decoration: none;">
+                    <button class="primary">
+
+                        <span>Make an Order <img style="margin-left:8px;min-width:13px;"
+                                src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
+                        </span>
+
+                    </button>
+                </a>
             </div>
             <div class="p2">
                 <p class="hl-p" style="color: #fff; margin-bottom:12px; margin-top:20px;">pro</p>
@@ -181,11 +198,13 @@
                     Logos, Banners, Icons<br>
                     50+ Mockups</p>
                 <p class="pack-text" style="font-size: 52px; color:#fff; margin-bottom:32px;">$299</p>
-                <button class="primary">
-                    <span>Make an Order <img style="margin-left:8px;min-width:13px;"
-                            src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
-                    </span>
-                </button>
+                <a href="/login" style="text-decoration: none;">
+                    <button class="primary">
+                        <span>Make an Order <img style="margin-left:8px;min-width:13px;"
+                                src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
+                        </span>
+                    </button>
+                </a>
             </div>
             <div class="p3">
                 <p class="hl-p" style="color: #1e1e1e; margin-bottom:12px; margin-top:20px;">premium</p>
@@ -194,11 +213,13 @@
                     Logos, Banners, Icons<br>
                     Product Packaging</p>
                 <p class="pack-text" style="font-size: 52px; color:#1e1e1e; margin-bottom:32px;">$299</p>
-                <button class="primary">
-                    <span>Make an Order <img style="margin-left:8px;min-width:13px;"
-                            src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
-                    </span>
-                </button>
+                <a href="/login" style="text-decoration: none;">
+                    <button class="primary">
+                        <span>Make an Order <img style="margin-left:8px;min-width:13px;"
+                                src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
+                        </span>
+                    </button>
+                </a>
             </div>
         </div>
         <div class="right3">
@@ -247,11 +268,13 @@
                 <img src="{{ URL::asset('assets/portfolio/pp7.png'); }}" class="ppic" alt="">
             </div>
         </div>
-        <button class="primary-green" style="width: fit-content;">
-            <span>View Complete Portfolio <img style="margin-left:8px;min-width:13px;"
-                    src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
-            </span>
-        </button>
+        <a href="/portfolio" style="text-decoration: none;">
+            <button class="primary-green" style="width: fit-content;">
+                <span>View Complete Portfolio <img style="margin-left:8px;min-width:13px;"
+                        src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
+                </span>
+            </button>
+        </a>
     </section>
 
 
@@ -298,7 +321,7 @@
 
 
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="left4">
             <p class="hl6" style="color: #1E30D5;">about us</p>
             <p class="about-head">Know more about us<br>
@@ -360,11 +383,13 @@
         </div>
 
         <div class="btnpair">
-            <button class="primary">
-                <span>Make an order <img style="margin-left:8px;min-width:13px;"
-                        src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
-                </span>
-            </button>
+            <a href="/login" style="text-decoration: none;">
+                <button class="primary">
+                    <span>Make an order <img style="margin-left:8px;min-width:13px;"
+                            src="{{ URL::asset('assets/arrow-right.png'); }}" alt="">
+                    </span>
+                </button>
+            </a>
             <button class="secondary">Leave us a message</button>
 
         </div>
@@ -399,23 +424,29 @@
                 <hr class="hr1">
                 <div class="fmenus">
                     <div class="menu1">
-                        <a class="m1a" href="">Home</a>
-                        <a class="m1a" href="">Services</a>
-                        <a class="m1a" href="">Pricing</a>
-                        <a class="m1a" href="">Portfolio</a>
-                        <a class="m1a" href="">About Us</a>
+                        <a class="m1a" href="/">Home</a>
+                        <a class="m1a" href="/#services">Services</a>
+                        <a class="m1a" href="/#packages">Pricing</a>
+                        <a class="m1a" href="/portfolio">Portfolio</a>
+                        <a class="m1a" href="/#about">About Us</a>
                     </div>
                     <div class="menu2">
-                        <a class="m1a" href="">Log In</a>
-                        <a class="m1a" href="">New user? - Sign Up</a>
+                        <a class="m1a" href="/login">Log In</a>
+                        <a class="m1a" href="/register">New user? - Sign Up</a>
                     </div>
                     <div class="menu3">
                         <p class="copyright">2022 All rights reserved.
                             This website is designed on Figma and built using HTML, CSS, Bootstrap, Laravel and PHP.</p>
                         <div class="socials">
-                            <img src="{{ URL::asset('assets/fb.png'); }}" style="width: 26px;" alt="">
-                            <img src="{{ URL::asset('assets/in.png'); }}" style="width: 26px;" alt="">
-                            <img src="{{ URL::asset('assets/db.png'); }}" style="width: 26px;" alt="">
+                            <a href="https://www.facebook.com/selsa.studio/" class="m1a"><img
+                                    src="{{ URL::asset('assets/fb.png'); }}" style="width: 26px;" alt=""></a>
+                            <a href="https://www.instagram.com/selsa.studio/" class="m1a"><img
+                                    src="{{ URL::asset('assets/in.png'); }}" style="width: 26px;" alt=""></a>
+                            <a href="https://dribbble.com/KingSuhaibX" class="m1a"><img
+                                    src="{{ URL::asset('assets/db.png'); }}" style="width: 26px;" alt=""></a>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -424,9 +455,7 @@
     </section>
 
 
-    <section>
 
-    </section>
 </body>
 
 </html>

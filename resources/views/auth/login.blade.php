@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Selsa Studio</title>
     <link rel="stylesheet" href="{{ URL::asset('assets/login-style.css'); }}">
-
+    {{--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    --}}
 
 </head>
 
@@ -18,16 +21,26 @@
     <section class="navbar">
         <!-- LOGO DIV -->
         <div class="left">
-            <img src="{{ URL::asset('assets/navlogo.png'); }}" alt="">
+            <a href="/" style="text-decoration: none;"><img src="{{ URL::asset('assets/navlogo.png'); }}" alt=""></a>
         </div>
         <!-- MENU+BUTTONS DIV -->
         <div class="right">
             <div class="menu">
-                <li href="" style="margin-right:-35px;">Home</li>
-                <li href="" style="margin-right:-14px;">Services</li>
-                <li href="">Packages</li>
-                <li href="" style="margin-right:-15px;">Portfolio</li>
-                <li href="">About</li>
+                <a href="/" style="text-decoration: none; color:#849fa8;">
+                    <li href="" style="margin-right:-35px;">Home</li>
+                </a>
+                <a href="/#services" style="text-decoration: none; color:#849fa8;">
+                    <li href="" style="margin-right:-14px;">Services</li>
+                </a>
+                <a href="/#packages" style="text-decoration: none; color:#849fa8;">
+                    <li href="">Packages</li>
+                </a>
+                <a href="/portfolio" style="text-decoration: none; color:#849fa8;">
+                    <li href="" style="margin-right:-15px;">Portfolio</li>
+                </a>
+                <a href="/#about" style="text-decoration: none; color:#849fa8;">
+                    <li href="">About</li>
+                </a>
             </div>
             <div class="onboard">
                 @guest
@@ -132,6 +145,55 @@
     </section>
 </body>
 
+
+
+<section class="footer">
+    <hr class="hr1">
+    <div class="footwrap">
+        <div class="leftf">
+            <img src="{{ URL::asset('assets/footer-logo.png'); }}" style="width: 230px; margin-bottom:20px;" alt="">
+            <p class="title">Selsa Studio</p>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="rightf">
+            <p class="foot-head">Where<span> imagination</span> becomes <span>
+                    reality</span>.
+            </p>
+            <hr class="hr1">
+            <div class="fmenus">
+                <div class="menu1">
+                    <a class="m1a" href="/">Home</a>
+                    <a class="m1a" href="/#services">Services</a>
+                    <a class="m1a" href="/#packages">Pricing</a>
+                    <a class="m1a" href="/portfolio">Portfolio</a>
+                    <a class="m1a" href="/#about">About Us</a>
+                </div>
+                <div class="menu2">
+                    <a class="m1a" href="/login">Log In</a>
+                    <a class="m1a" href="/register">New user? - Sign Up</a>
+                </div>
+                <div class="menu3">
+                    <p class="copyright">2022 All rights reserved.
+                        This website is designed on Figma and built using HTML, CSS, Bootstrap, Laravel and PHP.</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/selsa.studio/" class="m1a"><img
+                                src="{{ URL::asset('assets/fb.png'); }}" style="width: 26px;" alt=""></a>
+                        <a href="https://www.instagram.com/selsa.studio/" class="m1a"><img
+                                src="{{ URL::asset('assets/in.png'); }}" style="width: 26px;" alt=""></a>
+                        <a href="https://dribbble.com/KingSuhaibX" class="m1a"><img
+                                src="{{ URL::asset('assets/db.png'); }}" style="width: 26px;" alt=""></a>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {{-- @extends('layouts.app')
 

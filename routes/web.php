@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProjectController;
   
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +22,14 @@ use App\Http\Controllers\MailController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login2', function () {
-    return view('auth.register2');
+// Route::get('/portfolio', function () {
+//     return view('portfolio');
+// });
+
+Route::get('/add-portfolio', function () {
+    return view('addPortfolio');
 });
+
 Auth::routes();
   
 /*------------------------------------------
@@ -57,3 +65,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('send-mail', [MailController::class, 'index']);
+Route::resource('products', ProductController::class);
+Route::get('dbredirect', [LoginController::class, 'dbroute']);
+Route::get('/portfolio', [ProductController::class, 'index']);
+Route::get('/view', [ProjectController::class, 'index']);
+Route::POST('/makeorder', [ProjectController::class, 'store']);
